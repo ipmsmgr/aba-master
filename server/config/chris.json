@@ -1,0 +1,23 @@
+{
+    "server": { // Node server
+        "host": "localhost",
+        "port": 8081
+    },
+    "db": { // DB Config not currently being used
+        "host": "localhost",
+        "port": "27017",
+        "table": "test"
+    },
+    "directories": {
+        reports: "/Users/cfackerm/temp/pi_reports/",
+        uploads: "/Users/cfackerm/temp/pi_uploads/"
+    },
+    "pi": { // User credentials for bluemix API
+        //"url": "http://10.4.20.102:8080/systemu/service/api/v2/profile", // https://gateway.watsonplatform.net/personality-insights/api/v2/profile
+        //"user": "", //6b995feb-eff2-4914-87fc-f308c4a5e5ab
+        //"password": "", //ae7GdGoasONi
+        "url": "https://gateway.watsonplatform.net/personality-insights/api/v2/profile",
+        "user": "6b995feb-eff2-4914-87fc-f308c4a5e5ab",
+        "password": "ae7GdGoasONi"
+    }
+}

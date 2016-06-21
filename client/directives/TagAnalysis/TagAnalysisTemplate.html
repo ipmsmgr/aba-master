@@ -1,0 +1,15 @@
+
+<div id="barchartContainer" >
+    <div class="chart-panel">
+        <div id="barchartContainer" layout="row" layout-align="center center">
+            <h3 class="base--h3 output--header">Barchart</h3>
+            <div flex style="margin:0px;"></div>
+        </div>
+        <div  layout="row" layout-align="center center">
+
+            <nvd3 flex id="barchart" options="options" data="data" style="overflow: visible;max-width:550px;" api="api"></nvd3>
+
+            <canvas id="barchart_canvas" ng-show="false" width="1000px" height="600px" ></canvas>
+        </div>
+    </div>
+</div>

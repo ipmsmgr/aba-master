@@ -1,0 +1,39 @@
+
+    <div class="_demo--container2">
+        <div class="_content2 chart-panel">
+            <div layout="row" layout-align="center center">
+                <h3 class="base--h3 output--header">Ranges</h3>
+                <div flex style="margin:0px;"></div>
+<!--
+                <div ng-click="panels.ranges=false;" style="cursor:pointer;">
+                <i class="fa fa-times" style="margin:0px;" ></i>
+                    </div>
+-->
+            </div>
+
+            
+            <div class="output--stats-row2 _demo--container2" layout="row">
+                <div class="output-big-5 output-stats-column2 slider-panel" ng-repeat="category in profile.tree.children" flex>
+                    
+                    <h4 class="base--h4">{{category.id | titlecase}}</h4>
+                    <div class="output-stats-column--percentile-label">*% = percentile</div>
+                    <div class="output-big-5--traits output-stats-column--traits"></div>
+
+                    <div ng-repeat="score in category.children[0].children | limitTo: limit as results" ng-init="expanded=false;">
+                        <pi-slider-score score="score" expanded="expanded" style="cursor:pointer;" ng-click="expanded=!expanded"></pi-slider-score>
+
+                        <div ng-repeat="subscore in score.children" ng-show="expanded" style="margin-left:15px;">
+                            <pi-slider-score score="subscore"></pi-slider-score>
+
+                        </div>
+                    </div>
+
+                    <a class="output-needs--toggle output-stats-column--toggle base--a" href="javascript:void(0);" ng-hide="results.length === category.children[0].children.length" ng-click="limit = 100">See more</a>
+
+                    <a class="output-needs--toggle output-stats-column--toggle base--a" href="javascript:void(0);" ng-hide="results.length != category.children[0].children.length" ng-click="limit = sliderLimit">See less</a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>

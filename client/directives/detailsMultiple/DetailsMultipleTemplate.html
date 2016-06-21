@@ -1,0 +1,30 @@
+<div id="barchartContainer">
+    <div class="chart-panel">
+        <div id="barchartContainer" layout="row" layout-align="center center">
+            <h3 class="base--h3 output--header">Details</h3>
+            <div flex style="margin:0px;"></div>
+        </div>
+        <div>
+            <div ng-repeat="a in aggregates | orderBy : '-variance'">
+             {{a.key}} {{(a.variance*100) | number:0 }} {{a.values | json}}
+            
+            
+            
+            <div ng-repeat="v in a.values track by $index" layout="row">
+                <div class="barchart-metric" flex="30">
+                    <dd class="percentage percentage-{{((v)*100)| number:0}}">
+
+                    </dd>
+
+                </div>
+<!--
+                <div flex>
+                    <span style="font-weight:bold;">{{obj.description.adjective}}</span>: 
+                    <span style="font-style:italic;color:gray;">{{obj.description.description}}</span>
+                </div>
+-->
+            </div>
+                </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,63 @@
+
+<style>
+    .progress{
+       border: 1px solid #337AB7; 
+    }
+
+    .negative.progress{
+        border: 1px solid crimson;
+    }
+    .negative .progress-bar{
+        background-color: crimson;
+    }
+</style>
+
+<!--    Summary -->
+    <div class="chart-panel" ng-show="analysis && panels.summary">
+        <div id="barchartContainer" layout="row" layout-align="center center">
+            <h3 class="base--h3 output--header">Summary</h3>
+            <div flex style="margin:0px;"></div>
+        </div>
+        <div class="_content2 chart-panel" ng-if="0">
+            <div layout="row" layout-align="center center" ng-click="panels.summary = false" style="cursor:pointer;">
+                <h3 class="base--h3 output--header">Summary</h3>
+                <div flex style="margin:0px;"></div>
+                <i class="fa fa-times" style="margin:0px;"></i>
+            </div>
+            <div>
+                <div>(Traits) Subject is:</div>
+<!--                            <ul >-->
+                    <div ng-repeat="trait in summary.details.traits | orderBy:'-metric.percentage'" style="margin-left:15px;" layout="row">
+                        <div >
+                            <uib-progressbar value="trait.abs*200" style="height: 10px;margin-right: 10px;margin-top: 6px;padding: 0px;width:25px;margin-bottom:0px;"
+                                             ng-class="{negative:trait.value<0}"></uib-progressbar> 
+                        </div>
+                        <div>
+                            <span style="color:gray;font-style:italic;">({{trait.metric.id}})</span>
+                            - 
+                            <span style="font-weight:bold;">{{trait.adjective}}</span>
+                        </div>
+                    </div>
+                
+            </div>
+            <div>(Facets) Subject is:</div>
+                <div ng-repeat="facet in summary.details.facets | orderBy:'-metric.percentage'" style="margin-left:15px;" layout="row">
+                        <div>
+                            <uib-progressbar value="facet.abs*200" style="height: 10px;margin-right: 10px;margin-top: 6px;padding: 0px;width:25px;margin-bottom:0px;"
+                                             ng-class="{negative:facet.value<0}"></uib-progressbar> 
+                        </div>
+                        <div>
+                            <span style="color:gray;font-style:italic;">({{facet.metric.id}})</span>
+                            - 
+                            <span style="font-weight:bold;">{{facet.adjective}}</span>: {{facet.description}}
+                        </div>
+                </div>
+            </div>
+
+
+            <div>
+                    <p ng-repeat="line in summary.lines track by $index" class="base--p" style="margin-bottom: 15px;">{{line}}</p>
+
+           
+            </div>
+        </div>

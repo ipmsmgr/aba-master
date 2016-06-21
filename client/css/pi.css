@@ -1,0 +1,1254 @@
+.documents-ul {
+  margin: 10px 0px;
+}
+
+.document-li {
+  background-color: white;
+  padding: 0px 15px 0px 0px;
+  border: 2px solid #ECECEC;
+  font-size: small;
+  margin: 2px 0px;
+}
+
+.md-input-has-value.large > input {
+  /*    font-size: 60px;*/
+  font-size: 4.20873em;
+  color: #325c80;
+  font-weight: 700;
+}
+
+.subnav {
+  /*
+      border-bottom: 2px solid #ECECEC;
+      background-color: #F4F4F4;
+  */
+}
+
+.subnav-item {
+  color: #264A60;
+  padding: 3px 5px;
+  margin: 3px;
+  border: 1px solid #264A60;
+  border-radius: 2px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.subnav-item.active {
+  background-color: #325C80;
+  color: white;
+}
+
+.subnav-item:hover {
+  background-color: white;
+  color: #264A60;
+}
+
+.analysis-date {
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.analysis-time {
+  font-size: 8px;
+  margin: 0px;
+  text-align: center;
+}
+
+.new-analysis-button {
+  background-color: #325C80;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px;
+}
+
+.new-analysis-button:hover {
+  background-color: #F4F4F4;
+}
+
+.help-text {
+  color: #5596E6;
+  font-size: smaller;
+  margin: 0px;
+}
+
+.tab-button {
+  margin: 0px 10px 0px 0px;
+  padding: 10px;
+  background-color: #F4F4F4;
+  border: 1px solid #ECECEC;
+  color: #747474;
+}
+
+.tab-spec {
+  background-color: #F4F4F4;
+  padding: 10px;
+}
+
+/**
+ * CSS bar graph with Positive and Negative values
+ */
+.graph {
+  width: 100px;
+  border: 1px solid #aeaeae;
+  background-color: white;
+}
+
+/* Start of "Micro clearfix" */
+.cf {
+  zoom: 1;
+}
+
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+/* End of "Micro clearfix" */
+.ext {
+  width: 50px;
+  padding: 2px 0;
+}
+
+.ext.neg {
+  border-right: 1px solid black;
+}
+
+.ext.pos {
+  margin-left: 50px;
+  border-left: 1px solid black;
+}
+
+.ext.neg .bar {
+  float: right;
+  margin-bottom: 5px;
+  background-color: darkred;
+}
+
+.ext.pos .bar {
+  background-color: lightsteelblue;
+}
+
+.bar {
+  height: 15px;
+}
+
+/**
+ * End bar charts
+ */
+.base-button {
+  padding: 0.5em 1em;
+  color: #325C80;
+  /* font-weight: bold; */
+  background-color: white;
+  border: 0px solid #d74108;
+  display: inline-block;
+  margin: 0px 2px;
+}
+
+.base-button:hover {
+  color: white;
+  background-color: #325C80;
+}
+
+.field-div {
+  padding: 2px 5px;
+  border-radius: 3px;
+  margin: 1px;
+  background-color: white;
+  white-space: nowrap;
+}
+
+.field-label {
+  cursor: move;
+}
+
+.field-remove {
+  cursor: pointer;
+  margin-left: 3px;
+}
+
+.big-input {
+  height: 52px;
+  border: none;
+  font-size: 44px;
+  padding: 0px 15px;
+  color: #325C80;
+  font-weight: bold;
+  margin: 0px 0px 10px 0px;
+}
+
+._content {
+  padding: 3px 10px !important;
+}
+
+.collapse-btn {
+  cursor: pointer;
+  padding: 0px 4px;
+  text-align: center;
+}
+.collapse-btn.round {
+  width: 21px;
+  height: 21px;
+  border-radius: 99px;
+}
+.collapse-btn i {
+  vertical-align: middle;
+}
+
+.collapse-btn:hover {
+  background-color: #325C80;
+  color: white;
+}
+
+.add-tag-btn {
+  border: 0px;
+  background-color: white;
+  color: #747474;
+  font-size: small;
+  padding: 0px 7px;
+}
+
+.tag-pill {
+  padding: 1px 4px;
+  background-color: #5596E6;
+  border: 1px solid #F4F4F4;
+  border-radius: 3px;
+  font-size: 10px;
+  color: white;
+  margin: 0px 2px;
+}
+
+.documents-table tr {
+  background-color: white;
+  padding: 2px;
+  border: 1px solid #ECECEC;
+  font-size: smaller;
+}
+
+.tabs-spec {
+  margin-top: 10px;
+  background-color: #F4F4F4;
+  padding: 3px;
+}
+
+.doc-date {
+  border-radius: 3px;
+  border: none;
+  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+  margin-right: 10px;
+  width: 80px;
+}
+
+.sidenav {
+  background-color: whitesmoke;
+}
+
+.sidenav-item {
+  padding: 5px 10px 5px 20px;
+  /* color: white; */
+  border-bottom: 1px solid white;
+  cursor: pointer;
+  font-size: smaller;
+}
+.sidenav-item.active {
+  font-weight: bold;
+}
+
+.angular-ui-tree-empty {
+  border: 1px dashed #bbb;
+  min-height: 100px;
+  background-color: #e5e5e5;
+  background-image: -webkit-linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff), -webkit-linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff);
+  background-image: -moz-linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff), -moz-linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff);
+  background-image: linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff), linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+}
+
+.angular-ui-tree-nodes {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.angular-ui-tree-nodes .angular-ui-tree-nodes {
+  padding-left: 20px;
+}
+
+.angular-ui-tree-node, .angular-ui-tree-placeholder {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-height: 20px;
+  line-height: 20px;
+}
+
+.angular-ui-tree-hidden {
+  display: none;
+}
+
+.angular-ui-tree-placeholder {
+  margin: 5px 0;
+  padding: 0;
+  min-height: 30px;
+}
+
+.angular-ui-tree-handle {
+  /*    cursor: move;*/
+  /*    text-decoration: none;*/
+  /*    font-weight: bold;*/
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  min-height: 20px;
+  line-height: 20px;
+}
+
+.angular-ui-tree-drag {
+  position: absolute;
+  pointer-events: none;
+  z-index: 999;
+  opacity: .8;
+}
+
+.chart-panel {
+  border: 5px solid #F5F5F5;
+  border-radius: 15px;
+  margin: 10px 30px;
+  padding: 15px;
+}
+
+.chart-panel h3 {
+  color: gray;
+  margin-top: 0px;
+}
+
+.title-add {
+  cursor: pointer;
+  color: #ECECEC;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.title-add:hover {
+  color: #5596E6;
+}
+
+.slider-panel {
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid #808080;
+  border-radius: 5px;
+}
+
+.rating {
+  color: #5a5a5a;
+}
+.rating .word-count {
+  font-weight: bold;
+}
+.rating .level {
+  font-weight: bold;
+}
+.rating .level.verystrong {
+  color: #00b4a0;
+}
+.rating .level.strong {
+  color: #4b8400;
+}
+.rating .level.decent {
+  color: #777677;
+}
+.rating .level.weak {
+  color: #e71d32;
+}
+
+.right-panel-menu {
+  background-color: whitesmoke;
+  color: #404041;
+}
+.right-panel-menu .menu-btn {
+  padding: 7px;
+}
+.right-panel-menu .menu-btn:hover {
+  background-color: #325C80;
+  color: white;
+}
+.right-panel-menu .menu-btn.active {
+  background-color: #325C80;
+  color: white;
+}
+
+.right-panel {
+  padding: 20px 20px;
+  background-color: whitesmoke;
+  color: #404041;
+  border-right: 3px solid #325C80;
+  border-left: 1px solid #ECECEC;
+}
+.right-panel .panel-header {
+  cursor: pointer;
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+  padding: 7px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+  background-color: #325C80;
+  color: white;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.subject-link {
+  color: #325C80;
+  cursor: pointer;
+  margin-left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 99px;
+  text-align: center;
+  margin-left: 10px;
+}
+.subject-link:hover {
+  background-color: #325C80;
+  color: white;
+}
+
+.comparison-summary .summary-p {
+  margin: 0px 10px 0px 0px;
+}
+
+.tip-tip {
+  background-color: #325C80;
+}
+
+.tip-arrow {
+  background-color: #325C80;
+}
+
+.details-error {
+  font-size: smaller;
+  color: gray;
+  font-style: italic;
+}
+
+.thresholds-help {
+  font-size: smaller;
+  font-style: italic;
+  text-align: center;
+  color: #325C80;
+  margin: 20px 0px;
+}
+
+.base--button[disabled] {
+  opacity: .5;
+}
+
+.barchart-metric {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  margin-bottom: 0px;
+  padding-right: 20px;
+  padding-top: 10px;
+}
+
+.text {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  width: 130px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  justify-content: flex-end;
+}
+
+.percentage {
+  font-size: .8em;
+  line-height: 1;
+  text-transform: uppercase;
+  width: 100%;
+  height: 40px;
+  background: repeating-linear-gradient(to right, #ddd, #ddd 1px, #fff 1px, #fff 25%);
+  border-right: 1px solid #ddd;
+}
+.percentage:after {
+  content: "";
+  display: block;
+  background-color: #B1CCD9;
+  width: 50px;
+  margin-bottom: 10px;
+  height: 25%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color .3s ease;
+  cursor: pointer;
+  margin-left: 50%;
+}
+.percentage:hover:after, .percentage:focus:after {
+  background-color: #aaa;
+}
+
+.percentage-1 {
+  background-color: crimson;
+}
+.percentage-1:after {
+  width: 49%;
+  margin-left: 1%;
+  background-color: #B1CCD9;
+}
+
+.percentage-2 {
+  background-color: crimson;
+}
+.percentage-2:after {
+  width: 48%;
+  margin-left: 2%;
+  background-color: #B1CCD9;
+}
+
+.percentage-3 {
+  background-color: crimson;
+}
+.percentage-3:after {
+  width: 47%;
+  margin-left: 3%;
+  background-color: #B1CCD9;
+}
+
+.percentage-4 {
+  background-color: crimson;
+}
+.percentage-4:after {
+  width: 46%;
+  margin-left: 4%;
+  background-color: #B1CCD9;
+}
+
+.percentage-5 {
+  background-color: crimson;
+}
+.percentage-5:after {
+  width: 45%;
+  margin-left: 5%;
+  background-color: #B1CCD9;
+}
+
+.percentage-6 {
+  background-color: crimson;
+}
+.percentage-6:after {
+  width: 44%;
+  margin-left: 6%;
+  background-color: #B1CCD9;
+}
+
+.percentage-7 {
+  background-color: crimson;
+}
+.percentage-7:after {
+  width: 43%;
+  margin-left: 7%;
+  background-color: #B1CCD9;
+}
+
+.percentage-8 {
+  background-color: crimson;
+}
+.percentage-8:after {
+  width: 42%;
+  margin-left: 8%;
+  background-color: #B1CCD9;
+}
+
+.percentage-9 {
+  background-color: crimson;
+}
+.percentage-9:after {
+  width: 41%;
+  margin-left: 9%;
+  background-color: #B1CCD9;
+}
+
+.percentage-10 {
+  background-color: crimson;
+}
+.percentage-10:after {
+  width: 40%;
+  margin-left: 10%;
+  background-color: #B1CCD9;
+}
+
+.percentage-11 {
+  background-color: crimson;
+}
+.percentage-11:after {
+  width: 39%;
+  margin-left: 11%;
+  background-color: #B1CCD9;
+}
+
+.percentage-12 {
+  background-color: crimson;
+}
+.percentage-12:after {
+  width: 38%;
+  margin-left: 12%;
+  background-color: #B1CCD9;
+}
+
+.percentage-13 {
+  background-color: crimson;
+}
+.percentage-13:after {
+  width: 37%;
+  margin-left: 13%;
+  background-color: #B1CCD9;
+}
+
+.percentage-14 {
+  background-color: crimson;
+}
+.percentage-14:after {
+  width: 36%;
+  margin-left: 14%;
+  background-color: #B1CCD9;
+}
+
+.percentage-15 {
+  background-color: crimson;
+}
+.percentage-15:after {
+  width: 35%;
+  margin-left: 15%;
+  background-color: #B1CCD9;
+}
+
+.percentage-16 {
+  background-color: crimson;
+}
+.percentage-16:after {
+  width: 34%;
+  margin-left: 16%;
+  background-color: #B1CCD9;
+}
+
+.percentage-17 {
+  background-color: crimson;
+}
+.percentage-17:after {
+  width: 33%;
+  margin-left: 17%;
+  background-color: #B1CCD9;
+}
+
+.percentage-18 {
+  background-color: crimson;
+}
+.percentage-18:after {
+  width: 32%;
+  margin-left: 18%;
+  background-color: #B1CCD9;
+}
+
+.percentage-19 {
+  background-color: crimson;
+}
+.percentage-19:after {
+  width: 31%;
+  margin-left: 19%;
+  background-color: #B1CCD9;
+}
+
+.percentage-20 {
+  background-color: crimson;
+}
+.percentage-20:after {
+  width: 30%;
+  margin-left: 20%;
+  background-color: #B1CCD9;
+}
+
+.percentage-21 {
+  background-color: crimson;
+}
+.percentage-21:after {
+  width: 29%;
+  margin-left: 21%;
+  background-color: #B1CCD9;
+}
+
+.percentage-22 {
+  background-color: crimson;
+}
+.percentage-22:after {
+  width: 28%;
+  margin-left: 22%;
+  background-color: #B1CCD9;
+}
+
+.percentage-23 {
+  background-color: crimson;
+}
+.percentage-23:after {
+  width: 27%;
+  margin-left: 23%;
+  background-color: #B1CCD9;
+}
+
+.percentage-24 {
+  background-color: crimson;
+}
+.percentage-24:after {
+  width: 26%;
+  margin-left: 24%;
+  background-color: #B1CCD9;
+}
+
+.percentage-25 {
+  background-color: crimson;
+}
+.percentage-25:after {
+  width: 25%;
+  margin-left: 25%;
+  background-color: #B1CCD9;
+}
+
+.percentage-26 {
+  background-color: crimson;
+}
+.percentage-26:after {
+  width: 24%;
+  margin-left: 26%;
+  background-color: #B1CCD9;
+}
+
+.percentage-27 {
+  background-color: crimson;
+}
+.percentage-27:after {
+  width: 23%;
+  margin-left: 27%;
+  background-color: #B1CCD9;
+}
+
+.percentage-28 {
+  background-color: crimson;
+}
+.percentage-28:after {
+  width: 22%;
+  margin-left: 28%;
+  background-color: #B1CCD9;
+}
+
+.percentage-29 {
+  background-color: crimson;
+}
+.percentage-29:after {
+  width: 21%;
+  margin-left: 29%;
+  background-color: #B1CCD9;
+}
+
+.percentage-30 {
+  background-color: crimson;
+}
+.percentage-30:after {
+  width: 20%;
+  margin-left: 30%;
+  background-color: #B1CCD9;
+}
+
+.percentage-31 {
+  background-color: crimson;
+}
+.percentage-31:after {
+  width: 19%;
+  margin-left: 31%;
+  background-color: #B1CCD9;
+}
+
+.percentage-32 {
+  background-color: crimson;
+}
+.percentage-32:after {
+  width: 18%;
+  margin-left: 32%;
+  background-color: #B1CCD9;
+}
+
+.percentage-33 {
+  background-color: crimson;
+}
+.percentage-33:after {
+  width: 17%;
+  margin-left: 33%;
+  background-color: #B1CCD9;
+}
+
+.percentage-34 {
+  background-color: crimson;
+}
+.percentage-34:after {
+  width: 16%;
+  margin-left: 34%;
+  background-color: #B1CCD9;
+}
+
+.percentage-35 {
+  background-color: crimson;
+}
+.percentage-35:after {
+  width: 15%;
+  margin-left: 35%;
+  background-color: #B1CCD9;
+}
+
+.percentage-36 {
+  background-color: crimson;
+}
+.percentage-36:after {
+  width: 14%;
+  margin-left: 36%;
+  background-color: #B1CCD9;
+}
+
+.percentage-37 {
+  background-color: crimson;
+}
+.percentage-37:after {
+  width: 13%;
+  margin-left: 37%;
+  background-color: #B1CCD9;
+}
+
+.percentage-38 {
+  background-color: crimson;
+}
+.percentage-38:after {
+  width: 12%;
+  margin-left: 38%;
+  background-color: #B1CCD9;
+}
+
+.percentage-39 {
+  background-color: crimson;
+}
+.percentage-39:after {
+  width: 11%;
+  margin-left: 39%;
+  background-color: #B1CCD9;
+}
+
+.percentage-40 {
+  background-color: crimson;
+}
+.percentage-40:after {
+  width: 10%;
+  margin-left: 40%;
+  background-color: #B1CCD9;
+}
+
+.percentage-41 {
+  background-color: crimson;
+}
+.percentage-41:after {
+  width: 9%;
+  margin-left: 41%;
+  background-color: #B1CCD9;
+}
+
+.percentage-42 {
+  background-color: crimson;
+}
+.percentage-42:after {
+  width: 8%;
+  margin-left: 42%;
+  background-color: #B1CCD9;
+}
+
+.percentage-43 {
+  background-color: crimson;
+}
+.percentage-43:after {
+  width: 7%;
+  margin-left: 43%;
+  background-color: #B1CCD9;
+}
+
+.percentage-44 {
+  background-color: crimson;
+}
+.percentage-44:after {
+  width: 6%;
+  margin-left: 44%;
+  background-color: #B1CCD9;
+}
+
+.percentage-45 {
+  background-color: crimson;
+}
+.percentage-45:after {
+  width: 5%;
+  margin-left: 45%;
+  background-color: #B1CCD9;
+}
+
+.percentage-46 {
+  background-color: crimson;
+}
+.percentage-46:after {
+  width: 4%;
+  margin-left: 46%;
+  background-color: #B1CCD9;
+}
+
+.percentage-47 {
+  background-color: crimson;
+}
+.percentage-47:after {
+  width: 3%;
+  margin-left: 47%;
+  background-color: #B1CCD9;
+}
+
+.percentage-48 {
+  background-color: crimson;
+}
+.percentage-48:after {
+  width: 2%;
+  margin-left: 48%;
+  background-color: #B1CCD9;
+}
+
+.percentage-49 {
+  background-color: crimson;
+}
+.percentage-49:after {
+  width: 1%;
+  margin-left: 49%;
+  background-color: #B1CCD9;
+}
+
+.percentage-50 {
+  background-color: crimson;
+}
+.percentage-50:after {
+  width: 0%;
+  margin-left: 50%;
+  background-color: #B1CCD9;
+}
+
+.percentage-51:after {
+  width: 1%;
+  background-color: #B1CCD9;
+}
+
+.percentage-52:after {
+  width: 2%;
+  background-color: #B1CCD9;
+}
+
+.percentage-53:after {
+  width: 3%;
+  background-color: #B1CCD9;
+}
+
+.percentage-54:after {
+  width: 4%;
+  background-color: #B1CCD9;
+}
+
+.percentage-55:after {
+  width: 5%;
+  background-color: #B1CCD9;
+}
+
+.percentage-56:after {
+  width: 6%;
+  background-color: #B1CCD9;
+}
+
+.percentage-57:after {
+  width: 7%;
+  background-color: #B1CCD9;
+}
+
+.percentage-58:after {
+  width: 8%;
+  background-color: #B1CCD9;
+}
+
+.percentage-59:after {
+  width: 9%;
+  background-color: #B1CCD9;
+}
+
+.percentage-60:after {
+  width: 10%;
+  background-color: #B1CCD9;
+}
+
+.percentage-61:after {
+  width: 11%;
+  background-color: #B1CCD9;
+}
+
+.percentage-62:after {
+  width: 12%;
+  background-color: #B1CCD9;
+}
+
+.percentage-63:after {
+  width: 13%;
+  background-color: #B1CCD9;
+}
+
+.percentage-64:after {
+  width: 14%;
+  background-color: #B1CCD9;
+}
+
+.percentage-65:after {
+  width: 15%;
+  background-color: #B1CCD9;
+}
+
+.percentage-66:after {
+  width: 16%;
+  background-color: #B1CCD9;
+}
+
+.percentage-67:after {
+  width: 17%;
+  background-color: #B1CCD9;
+}
+
+.percentage-68:after {
+  width: 18%;
+  background-color: #B1CCD9;
+}
+
+.percentage-69:after {
+  width: 19%;
+  background-color: #B1CCD9;
+}
+
+.percentage-70:after {
+  width: 20%;
+  background-color: #B1CCD9;
+}
+
+.percentage-71:after {
+  width: 21%;
+  background-color: #B1CCD9;
+}
+
+.percentage-72:after {
+  width: 22%;
+  background-color: #B1CCD9;
+}
+
+.percentage-73:after {
+  width: 23%;
+  background-color: #B1CCD9;
+}
+
+.percentage-74:after {
+  width: 24%;
+  background-color: #B1CCD9;
+}
+
+.percentage-75:after {
+  width: 25%;
+  background-color: #B1CCD9;
+}
+
+.percentage-76:after {
+  width: 26%;
+  background-color: #B1CCD9;
+}
+
+.percentage-77:after {
+  width: 27%;
+  background-color: #B1CCD9;
+}
+
+.percentage-78:after {
+  width: 28%;
+  background-color: #B1CCD9;
+}
+
+.percentage-79:after {
+  width: 29%;
+  background-color: #B1CCD9;
+}
+
+.percentage-80:after {
+  width: 30%;
+  background-color: #B1CCD9;
+}
+
+.percentage-81:after {
+  width: 31%;
+  background-color: #B1CCD9;
+}
+
+.percentage-82:after {
+  width: 32%;
+  background-color: #B1CCD9;
+}
+
+.percentage-83:after {
+  width: 33%;
+  background-color: #B1CCD9;
+}
+
+.percentage-84:after {
+  width: 34%;
+  background-color: #B1CCD9;
+}
+
+.percentage-85:after {
+  width: 35%;
+  background-color: #B1CCD9;
+}
+
+.percentage-86:after {
+  width: 36%;
+  background-color: #B1CCD9;
+}
+
+.percentage-87:after {
+  width: 37%;
+  background-color: #B1CCD9;
+}
+
+.percentage-88:after {
+  width: 38%;
+  background-color: #B1CCD9;
+}
+
+.percentage-89:after {
+  width: 39%;
+  background-color: #B1CCD9;
+}
+
+.percentage-90:after {
+  width: 40%;
+  background-color: #B1CCD9;
+}
+
+.percentage-91:after {
+  width: 41%;
+  background-color: #B1CCD9;
+}
+
+.percentage-92:after {
+  width: 42%;
+  background-color: #B1CCD9;
+}
+
+.percentage-93:after {
+  width: 43%;
+  background-color: #B1CCD9;
+}
+
+.percentage-94:after {
+  width: 44%;
+  background-color: #B1CCD9;
+}
+
+.percentage-95:after {
+  width: 45%;
+  background-color: #B1CCD9;
+}
+
+.percentage-96:after {
+  width: 46%;
+  background-color: #B1CCD9;
+}
+
+.percentage-97:after {
+  width: 47%;
+  background-color: #B1CCD9;
+}
+
+.percentage-98:after {
+  width: 48%;
+  background-color: #B1CCD9;
+}
+
+.percentage-99:after {
+  width: 49%;
+  background-color: #B1CCD9;
+}
+
+.percentage-100:after {
+  width: 50%;
+  background-color: #B1CCD9;
+}
+
+html, body {
+  height: 500px;
+  font-family: "fira-sans-2",sans-serif;
+  color: #333;
+}
+
+.splash-div {
+  padding: 30px;
+  border: 1px solid #264A60;
+  border-radius: 5px;
+  height: 350px;
+  margin: 30px;
+  width: 270px;
+  background-color: white;
+  color: #264A60;
+  font-size: large;
+  text-align: center;
+  font-weight: bold;
+}
+.splash-div .splash-btn {
+  border: 1px solid #264A60;
+  border-top: none;
+  font-size: small;
+  background-color: #5596E6;
+  color: white;
+}
+.splash-div .splash-btn[disabled] {
+  background-color: rgba(38, 74, 96, 0.27);
+}
+.splash-div .splash-help {
+  padding: 20px 0px;
+  font-style: italic;
+  font-weight: normal;
+  font-size: small;
+  text-align: left;
+}
+
+.splash-btn {
+  cursor: pointer;
+  background-color: white;
+}
+
+.splash-btn:hover {
+  background-color: #5596E6;
+}
+
+/*# sourceMappingURL=pi.css.map */

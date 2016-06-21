@@ -1,0 +1,24 @@
+<div class="right-panel" style="max-width: 240px">
+    <div class="panel-header"  ng-click="state.rightPanel=null">
+        Thresholds
+    </div>
+    <div>
+        <div class="thresholds-help" style="color:gray;">
+            Please note, selecting a threshold will affect the Behaviors and the Details View only.
+        </div>
+        <div class="thresholds-help">Show highly significant scores only</div>
+        <div ng-repeat="step in steps" layout="row" layout-align="space between">
+            <div><i class="fa fa-angle-left" aria-hidden="true"></i> {{step.min}}&#37;</div>
+            <div>
+                <div ng-click="selectThreshold(step)" class="collapse-btn round" ng-if="!step.selected">
+                    <i class="fa fa-circle-o" aria-hidden="true"></i>
+                </div>
+                <div  class="collapse-btn round" ng-if="step.selected">
+                    <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div><i class="fa fa-angle-right" aria-hidden="true"></i> {{step.max}}&#37;</div>
+        </div>
+        <div class="thresholds-help">Show all scores</div>
+    </div>
+</div>

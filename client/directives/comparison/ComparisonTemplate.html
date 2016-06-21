@@ -1,0 +1,56 @@
+<div class="_demo--bg-container" ng-init="hideScore=false">
+    <div class="_demo--container">
+        <div class="_content">
+            <div layout="row" layout-align="center center" ng-click="hideScore=!hideScore;refreshLayout();" style="cursor:pointer;">
+                <h3 class="base--h3 output--header">Scores</h3>
+                <div flex style="margin:0px;"></div>
+                <i class="fa fa-chevron-up" ng-show="!hideScore" style="margin:0px;"></i>
+                <i class="fa fa-chevron-down" ng-show="hideScore" style="margin:0px;"></i>
+            </div>
+            <div class="output--stats-row _demo--container" ng-show="!hideScore">
+                <canvas class="chart chart-bar" chart-data="chartData.data" chart-labels="chartData.labels" chart-series="chartData.series" chart-options="{barValueSpacing : 5,barDatasetSpacing : 1,scaleBeginAtZero : true}">
+                </canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="_demo--bg-container" ng-init="hideAvg=true">
+    <div class="_demo--container">
+        <div class="_content">
+            <div layout="row" layout-align="center center" ng-click="hideAvg=!hideAvg;refreshLayout();" style="cursor:pointer;">
+                <h3 class="base--h3 output--header">Average</h3>
+                <div flex style="margin:0px;"></div>
+                <i class="fa fa-chevron-up" ng-show="!hideAvg" style="margin:0px;"></i>
+                <i class="fa fa-chevron-down" ng-show="hideAvg" style="margin:0px;"></i>
+            </div>
+            <div class="output--stats-row _demo--container" ng-show="!hideAvg">
+                <canvas class="chart chart-bar" chart-data="average.data" chart-labels="average.labels" chart-series="average.series" chart-options="{barValueSpacing : 5,barDatasetSpacing : 1}" >
+                </canvas>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="_demo--bg-container" ng-init="hideVariance=true">
+    <div class="_demo--container">
+        <div class="_content">
+            <div layout="row" layout-align="center center" ng-click="hideVariance=!hideVariance;refreshLayout();" style="cursor:pointer;">
+                <h3 class="base--h3 output--header">Variance</h3>
+                <div flex style="margin:0px;"></div>
+                <i class="fa fa-chevron-up" ng-show="!hideVariance" style="margin:0px;"></i>
+                <i class="fa fa-chevron-down" ng-show="hideVariance" style="margin:0px;"></i>
+            </div>
+            <div class="output--stats-row _demo--container" ng-show="!hideVariance">
+                <canvas class="chart chart-bar" chart-data="variance.data" chart-labels="variance.labels" chart-series="variance.series" chart-options="{barValueSpacing : 5,barDatasetSpacing : 1}" >
+                </canvas>
+
+            </div>
+        </div>
+    </div>
+</div>

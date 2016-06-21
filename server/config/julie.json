@@ -1,0 +1,20 @@
+{
+    "server": { // Node server
+        "host": "localhost",
+        "port": 3081
+    },
+    "db": { // DB Config not currently being used
+        "server": "",
+        "port": "",
+        "table_name": ""
+    },
+    "directories": {
+        reports: "/dev/tmp/pi_reports/",
+        uploads: "/dev/tmp/pi_uploads/"
+    },
+    "pi": { 
+         "url": "https://gateway.watsonplatform.net/personality-insights/api/v2/profile",
+        "password": "10QpZKVO4wBe",
+        "user": "96e2cb75-0cb2-4fe8-be97-6343f3fa583a"
+    }
+}

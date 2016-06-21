@@ -1,0 +1,33 @@
+<div id="barchartContainer">
+    <div class="chart-panel">
+        <div id="barchartContainer" layout="row" layout-align="center center">
+            <h3 class="base--h3 output--header">Details</h3>
+            <div flex style="margin:0px;"></div>
+        </div>
+        <div>
+            <div ng-repeat="category in data">
+                <h3>{{category.label}}</h3>
+                <div ng-repeat="obj in category.values " ng-show="(obj.percentage <= thresholds.min) || (obj.percentage >= thresholds.max)"  layout="row">
+                    <div flex="20" layout="column">
+                        <div>
+                            <span>{{obj.name}}</span><span style="color:gray;font-size: smaller;"> ({{((obj.percentage)*100)| number:0}}&#37;)</span>
+                        </div>
+                        <div class="details-error">
+                            <span>Error: </span><span>{{((obj.sampling_error)*100)| number:0}}&#37;</span>
+                        </div>
+                    </div>
+                    <div class="barchart-metric" flex="30">
+                        <dd class="percentage percentage-{{((obj.percentage)*100)| number:0}}">
+                        </dd>
+
+                    </div>
+                    <div flex>
+                        <span style="font-weight:bold;">{{obj.adjective}}</span>: 
+                        <span style="font-style:italic;color:gray;">{{obj.sentence}}</span>
+                    </div>
+    <!--                <pre>{{obj|json}}</pre>-->
+                </div>
+                </div>
+        </div>
+    </div>
+</div>

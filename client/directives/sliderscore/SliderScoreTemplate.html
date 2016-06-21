@@ -1,0 +1,29 @@
+
+
+<div>
+    
+        <div class="percent-bar-and-score2">
+        
+        <div class="percent-bar-and-score--label output-big-5--trait-label output-big-5--trait-label_POSITIVE" style="margin-top:5px;" ng-click="showChildren = !showChildren">
+            <span ng-show="score.children && expanded" style="font-weight:bold;">{{score.name}}</span> 
+            <span ng-hide="score.children && expanded">{{score.name}}</span> 
+            <i class="icon icon-down-arrow percent-bar-and-score--toggle-icon toggled" ng-show="score.children && expanded" style="margin: 0px;"></i>
+            <i class="icon icon-down-arrow percent-bar-and-score--toggle-icon" ng-show="score.children && !expanded" style="margin: 0px;"></i>
+            <div class="tooltip">
+                <p>{{tooltips.get(score.name)}}</p>
+            </div>
+        </div>
+        
+        
+        <div class="percent-bar percent-bar-and-score--percent-bar">
+            <div class="percent-bar--meter" ng-style="{'-webkit-transform': 'translate(' + (score.percentage*100) + '%)', 'transform': 'translate('+(score.percentage*100)+'%)'}">
+                <div class="percent-bar--ball percent-bar--ball_POSITIVE-FILL"></div>
+                <div class="percent-bar-and-score--number">
+                    {{score.percentage*100| number :0}}%</div>
+            </div>
+        </div>
+
+    </div>
+    
+
+</div>

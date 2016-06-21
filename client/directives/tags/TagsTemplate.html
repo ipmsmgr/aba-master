@@ -1,0 +1,30 @@
+
+<div  class="right-panel" >
+    <div class="panel-header" ng-click="state.rightPanel=null">
+         Tags
+    </div>
+    <div ui-tree class="tag-tree" data-drag-enabled="false" style="font-size:small;" >
+        <ol ui-tree-nodes="" ng-model="tags2">
+            <li ng-repeat="category in tags2" ui-tree-node class="tag-category">
+                <div ui-tree-handle class="category-handle">
+                    <div ng-click="category.collapsed = !category.collapsed" class="collapse-btn">
+                        <i class="fa " ng-class="{'fa-chevron-up': !category.collapsed,'fa-chevron-down': category.collapsed}"></i> {{category.label}}</div>
+                </div>
+                <ol ui-tree-nodes="" ng-model="category.tags" ng-show="!category.collapsed">
+                    <li ng-repeat="tag in category.tags" ui-tree-node class="tag-handle">
+                        <div  ng-click="toggleTag(tag)" ui-tree-handle>
+                            <i class="fa" ng-class="{'fa-square-o': !tag.selected,'fa-check-square-o': tag.selected}"></i> {{tag.label}}
+                        </div>
+                    </li>
+
+                </ol>
+            </li>
+            
+            
+            
+            
+        </ol>
+    </div>
+</div>
+
+

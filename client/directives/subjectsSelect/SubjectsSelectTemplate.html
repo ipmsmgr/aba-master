@@ -1,0 +1,26 @@
+
+<div class="right-panel" >
+    <div class="panel-header"  ng-click="state.rightPanel=null">
+         Subjects
+    </div>
+    <div ui-tree class="tag-tree" data-drag-enabled="false" style="font-size:small;padding-left: 20px;" >
+        <ol ui-tree-nodes="" ng-model="subjects">
+            <li ui-tree-node class="tag-category" ng-repeat="subject in subjects" ng-if="subject.name">
+                <div ui-tree-handle class="category-handle" layout="row">
+                    <div ng-click="toggleSubject(subject)">
+                        <i class="fa" ng-class="{'fa-square-o': !subject.selected,'fa-check-square-o': subject.selected}"></i> 
+                    </div>
+                    <div flex ng-click="toggleSubject(subject)" style="margin-left:4px;">{{subject.name}}</div>
+                    <div ng-click="goToSubject(subject.name)" class="subject-link"><i class="fa fa-arrow-right" aria-hidden="true"></i></div>
+                </div>
+              
+            </li>
+            
+            
+            
+            
+        </ol>
+    </div>
+</div>
+
+

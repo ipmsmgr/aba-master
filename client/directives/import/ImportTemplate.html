@@ -1,0 +1,143 @@
+<div>
+    <div class="_demo--container" ng-show="state.is(states.selectDocs)">
+        <div class="_content input">
+
+            <p class="base--p">For statistically significant results, <a class="base--a" href="" target="_blank">you need at least 3500 words and ideally 6000</a>. You can still look at the score if you have at least 100 words, but you should take those results with a grain of salt.</p>
+            <div class="tab-panels" role="tabpanel">
+                <span class="input--reset icon-hyperlink">
+          <span class="icon icon-reset"></span>
+                <button class="base--a icon-hyperlink--button icon-hyperlink--button_BLANK input--reset-button" href="" type="reset">
+                    Reset
+                </button>
+                </span>
+
+                <div class="tab-panels--tab-content" layout="row">
+
+                    <div flex>
+                     
+
+                        <button class="base--button" ngf-select="uploadFiles($files)" multiple>Select Documents</button>
+
+                        <ul class="documents-ul">
+
+                            <li ng-repeat="f in files" class="document-li">
+
+                                <div layout="column">
+                                    <div layout="row" layout-align="start center" style="margin:0px;">
+
+                                        <div class="tab-button" ng-click="isTabDoc = !isTabDoc">
+                                            <i class="fa fa-table" ng-if="isTabDoc"></i>
+                                            <i class="fa fa-file-text-o" ng-if="!isTabDoc"></i>
+                                        </div>
+
+                                        <div style="margin:0px;" layout="row" flex>
+<!--                                            <span style="margin-right:10px;">{{f.name}}</span>-->
+                                            <input type="text" ng-model="f.label" ng-init="f.label=getLabelFromFileName(f.name)" />
+                                            <input type="text" ng-model="f.subject" ng-init="f.subject=getLabelFromFileName(f.name)" />
+                                            <div class="tag-pill" ng-repeat="tag in f.tags">
+                                                <span>{{tag}}
+                                                </span>
+                                            <i class="fa fa-times field-remove" style="cursor:pointer;" ng-click="f.tags.splice($index, 1);"></i>
+                                            </div>
+                                        </div>
+                                        
+                                        <div>
+                                        <datepicker ng-init="f.date = '1/1/2016'">
+                                              <input ng-model="f.date" type="text"
+                                                     placeholder="Pick date"
+                                                     date-format="'M/d/yy'" class="doc-date"/>
+                                            </datepicker>
+                                        </div>
+
+                                <div ng-click="f.selected = !f.selected"><i class="fa" ng-class="{'fa-square-o': !f.selected,'fa-check-square-o': f.selected}"></i></div>
+                                    </div>
+                                    <div layout="row" layout-align="center center">
+
+                                        <div ng-show="isTabDoc" class="tab-spec">
+                                            <select ng-model="fieldType">
+                                                <option value="subject" selected="selected">Subject ID</option>
+                                                <option value="other">Other</option>
+                                                <option value="content">Content</option>
+                                            </select>
+                                            <i class="fa fa-plus-circle" aria-hidden="true" ng-click="f.fields.push(fieldType);"></i>
+                                        </div>
+
+                                        <div style="margin:0px;" ng-init="f.fields=[];" ng-show="isTabDoc" flex class="tabs-spec">
+                                            <!--                                        -->
+                                            <div style="margin:0px;" layout="row" ui-sortable ng-model="f.fields">
+                                                <div ng-repeat="field in f.fields track by $index" class="field-div">
+                                                    <span class="field-label">{{field}}</span>
+                                                    <i class="fa fa-times field-remove" style="cursor:pointer;" ng-click="f.fields.splice($index, 1);"></i>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+
+
+                                    </div>
+                                </div>
+
+
+
+
+                            </li>
+                        </ul>
+
+                        <button type="submit" class="base--button input--submit-button2" ng-click="extractText()" ng-show="files.length">Extract Text</button>
+                        
+                        <button type="submit" class="base--button input--submit-button2" ng-click="extractAndAnalyze()" ng-show="files.length">Analyze</button>
+                    </div>
+
+                    <div>
+                        <div ui-tree class="tag-tree" data-drag-enabled="false">
+                            <ol ui-tree-nodes="" ng-model="tags">
+                                <li ng-repeat="category in tags" ui-tree-node class="tag-category">
+                                    <div ui-tree-handle class="category-handle">
+                                        <div ng-click="toggleCategory(this)">
+                                            <i class="fa " ng-class="{'fa-chevron-up': collapsed,'fa-chevron-down': !collapsed}"></i> {{category.label}}</div>
+                                    </div>
+                                    <ol ui-tree-nodes="" ng-model="category.tags">
+                                        <li ng-repeat="tag in category.tags" ui-tree-node class="tag-handle">
+                                            <div ui-tree-handle ng-click="addTagToDocs(tag)">
+                                                <button class="add-tag-btn" href="" ng-click="addTag(tag)">
+                                                    Add
+                                                </button>
+                                                {{tag.label}}
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="_demo--container" ng-show="state.is(states.reviewText)">
+        <div class="_content">
+            <div style="padding: 0px 0px 30px 0px;color: #5A5A5A;">
+                <label>Analysis Label: </label>
+                <input type="text" ng-model="analysisLabel" style="width:300px;" />
+            </div>
+            <div layout="row">
+                <div flex>
+                    <h3 class="base--h3 output--header">Extracted Text</h3></div>
+                <div>
+                    <button type="submit" class="base--button input--submit-button2" ng-click="analyze()">Analyze</button>
+                </div>
+            </div>
+
+            <textarea id="inputText2" class="base--textarea input--text-area orientation" placeholder="Please enter text to analyze (minimum of 100 words)..." ng-model="text" style="height:500px;"> </textarea>
+
+
+
+        </div>
+    </div>
+
+
+</div>

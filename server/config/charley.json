@@ -1,0 +1,20 @@
+{
+    "server": { // Node server
+        "host": "localhost",
+        "port": 8081
+    },
+    "db": { // DB Config not currently being used
+        "server": "",
+        "port": "",
+        "table_name": ""
+    },
+    "directories": {
+        reports: "C:\\cygwin\\home\\cebeller\\temp\\pi_reports",
+        uploads: "C:\\cygwin\\home\\cebeller\\temp\\pi_uploads"
+    },
+    "pi": { // User credentials for bluemix API
+        "url": "", // Not currently in use
+        "user": "6b995feb-eff2-4914-87fc-f308c4a5e5ab",
+        "password": "ae7GdGoasONi"
+    }
+}

@@ -1,0 +1,38 @@
+
+    <div class="chart-panel" layout="row" layout-align="space-around start">
+        <div id="barchartContainer" layout="row" layout-align="center center" style="    margin-right: 40px;">
+            <h3 class="base--h3 output--header">Behaviors</h3>
+            <div flex style="margin:0px;"></div>
+        </div>
+
+                <div class="output-summary--likely-behaviors--section" ng-show="behaviors.likely.length">
+                    <h4 class="base--h4" style="margin-top: 0px;">Subject is likely to______</h4>
+                    <div class="output-summary--likely-behaviors">
+
+                        <div ng-repeat="item in behaviors.likely" class="output-summary--behavior" ng-class="'item.score>0.5'?'output-summary--behavior_POSITIVE':'output-summary--behavior_NEGATIVE'">
+
+                            <i class="icon" ng-class="item.score > 0.5 ? 'icon-likely' : 'icon-not-likely'"></i> {{item.name}}
+                            <div class="tooltip" ng-bind-html="item.tooltip">
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="output-summary--unlikely-behaviors--section" ng-show="behaviors.unlikely.length">
+                    <h4 class="base--h4" style="margin-top: 0px;">Subject is unlikely to______</h4>
+                    <div class="output-summary--unlikely-behaviors">
+
+                        <div ng-repeat="item in behaviors.unlikely" class="output-summary--behavior" ng-class="'item.score>0.5'?'output-summary--behavior_NEGATIVE':'output-summary--behavior_NEGATIVE'">
+
+                            <i class="icon" ng-class="item.score > 0.5 ? 'icon-likely' : 'icon-not-likely'"></i> {{item.name}}
+                            <div class="tooltip" ng-bind-html="item.tooltip">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="output-summary--no-behaviors--section" ng-hide="behaviors.likely.length || behaviors.unlikely.length">
+                    <span class="base--h4">This analysis does not relate to any distinguishing behavior</span> <span class="">from those in the studies considered for this demo.</span>
+                </div>
+    </div>

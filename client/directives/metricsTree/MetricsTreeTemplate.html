@@ -1,0 +1,58 @@
+<div class="right-panel" >
+    <div class="panel-header"  ng-click="state.rightPanel=null">
+        Metrics
+    </div>
+    <div ui-tree class="tag-tree" data-drag-enabled="false" style="font-size:small;">
+        <ol ui-tree-nodes="" ng-model="metrics" >
+            <li ng-repeat="category in metrics" ui-tree-node class="tag-category" style="padding-left: 10px;">
+                <div ui-tree-handle class="category-handle" layout="row">
+                    
+                        <div flex>
+                             {{category.name}}
+                        </div>
+                    
+                    
+                        <div ng-click="deselectChildren(category)" class="collapse-btn round">
+                            <i class="fa fa-circle-o" aria-hidden="true"></i>
+                        </div>
+                        <div  ng-click="selectChildren(category)" class="collapse-btn round">
+                            <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                        </div>
+                    
+                        <div  ng-click="category.collapsed = !category.collapsed" class="collapse-btn round">
+                            <i class="fa " ng-class="{'fa-chevron-up': !category.collapsed,'fa-chevron-down': category.collapsed}"></i>
+                        </div>
+                </div>
+                <ol ui-tree-nodes="" ng-model="category.children" ng-show="!category.collapsed">
+                    <li ng-repeat="metric in category.children" ui-tree-node class="tag-handle">
+                        <div ui-tree-handle layout="row" >
+                            <div  ng-click="toggleMetric(metric)" flex>
+                                <i class="fa" ng-class="{'fa-square-o': !metric.selected,'fa-check-square-o': metric.selected}"></i>
+                                {{metric.name}}
+                            </div>
+                            <div ng-click="deselectChildren(metric)" class="collapse-btn round" ng-show="metric.children">
+                                <i class="fa fa-circle-o" aria-hidden="true"></i>
+                            </div>
+                            <div  ng-click="selectChildren(metric)" class="collapse-btn round" ng-show="metric.children">
+                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                            </div>
+                            <div  ng-click="metric.collapsed = !metric.collapsed" ng-show="metric.children" class="collapse-btn round">
+                                <i class="fa " ng-class="{'fa-chevron-up': !metric.collapsed,'fa-chevron-down': metric.collapsed}"></i>
+                            </div>
+                        </div>
+                        <ol ui-tree-nodes="" ng-model="metric.children" ng-show="!metric.collapsed">
+                            <li ng-repeat="submetric in metric.children" ui-tree-node class="tag-handle" >
+                                <div ui-tree-handle >
+                                    <div  ng-click="toggleMetric(submetric)">
+                                    <i class="fa" ng-class="{'fa-square-o': !submetric.selected,'fa-check-square-o': submetric.selected}"></i>
+                                    {{submetric.name}}
+                                        </div>
+                                </div>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+</div>

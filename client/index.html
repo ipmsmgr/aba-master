@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html ng-app="pi">
+
+<head>
+    <title>Watson Automated Behavior Analysis</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="ct" content="<$= ct $>">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pi.css">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <!--Barchart-->
+    <link rel="stylesheet" href="node_modules/nvd3/build/nv.d3.min.css" />
+    <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css">
+    <link rel="stylesheet" href="bower_components/angularjs-datepicker/dist/angular-datepicker.min.css">
+    
+    <!-- Slider component -->
+    <link rel="stylesheet" href="bower_components/angularjs-slider/dist/rzslider.css">
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    
+    <!-- Progress Bar -->
+    <link rel="stylesheet" href="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css">
+    
+    <!-- Tooltips -->
+    <link rel="stylesheet" href="css/angular-tooltips.css">
+
+</head>
+
+<body ng-controller="MainCtrl as main" layout="column">
+    
+    
+    
+    
+    
+    <!-- top level heading -->
+    <header class="_demo--heading">
+        <div class="_demo--container">
+            <a class="wordmark" href="#/splash">
+                <span class="wordmark--left">IBM Watson</span>
+                <span class="wordmark--right">Automatic Behavior Analysis</span>
+            </a>
+        </div>
+    </header>
+    
+    <div ng-view flex></div>
+
+
+    
+  
+
+    <!-- JQuery Dependencies -->
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+    
+    <!-- Angular Components -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+
+    <!--  <script src="bower_components/ng-file-upload-shim.min.js"></script>  for no html5 browsers support -->
+    <script src="bower_components/ng-file-upload/ng-file-upload-all.js"></script>
+    <!-- Angular Material -->
+    <script src="bower_components/angular-material/angular-material.min.js"></script>
+    <!-- Moment library for prettifying dates -->
+    <script src="bower_components/moment/min/moment.min.js"></script>
+    <script src="bower_components/angular-file-saver/dist/angular-file-saver.bundle.min.js"></script>
+    <!-- Library for downloading reports (or any binary file) -->
+    <script src="bower_components/angular-moment/angular-moment.min.js"></script>
+    <!-- D3 dependencies for charts -->
+    <script src="node_modules/d3/d3.min.js" charset="utf-8"></script>
+    <script src="node_modules/nvd3/build/nv.d3.min.js"></script>
+    <script src="node_modules/angular-nvd3/dist/angular-nvd3.min.js"></script>
+    <!-- Dependency for demo.js - should be removed eventually -->
+    <script type="text/javascript" src="node_modules/markdown-it/dist/markdown-it.min.js"></script>
+    <!-- Utility for parsing JSON objects -->
+    <script type="text/javascript" src="node_modules/underscore/underscore-min.js"></script>
+    <!-- For draggin tab fields in document upload-->
+    <script src="node_modules/angular-ui-sortable/dist/sortable.min.js"></script>
+    <!-- Date picker for document upload -->
+    <script src="bower_components/angularjs-datepicker/dist/angular-datepicker.min.js"></script>
+    <!-- Barchart -->
+    <script src="bower_components/Chart.js/Chart.js"></script>
+    <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
+    <!-- Library for displaying tree structures (e.g., metrics and tags) -->
+    <script type="text/javascript" src="bower_components/angular-ui-tree/dist/angular-ui-tree.js"></script>
+    <!-- Math library for comparisons -->
+    <script src="bower_components/mathjs/dist/math.min.js"></script>
+    <!-- Library for converting SVG's to images -->
+    <script src="bower_components/canvg/dist/canvg.bundle.min.js"></script>
+    <!-- Slider UI component -->
+    <script src="bower_components/angularjs-slider/dist/rzslider.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Progress Bar -->
+    <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+    <!-- Tooltips -->
+    <script src="node_modules/angular-tooltips/dist/angular-tooltips.min.js"></script>
+
+    <!-- Application's app.js defines all sub-modules -->
+    <script src="app.js"></script>
+    
+    <!-- Directives -->
+    <script src="directives/sunburst/SunburstDirective.js"></script>
+    <script src="directives/slider/SliderDirective.js"></script>
+    <script src="directives/sliderscore/SliderScoreDirective.js"></script>
+    <script src="directives/barchart/BarchartDirective.js"></script>
+    <script src="directives/details/DetailsDirective.js"></script>
+    <script src="directives/detailsMultiple/DetailsMultipleDirective.js"></script>
+    <script src="directives/comparison/ComparisonDirective.js"></script>
+    <script src="directives/behaviors/BehaviorsDirective.js"></script>
+    <script src="directives/import/ImportDirective.js"></script>
+    <script src="directives/tags/TagsDirective.js"></script>
+    <script src="directives/subjectsSelect/SubjectsSelectDirective.js"></script>
+    <script src="directives/TagAnalysis/TagAnalysisDirective.js"></script>
+    <script src="directives/metricsTree/MetricsTreeDirective.js"></script>
+    <script src="directives/summary/SummaryDirective.js"></script>
+    <script src="directives/comparisonSummary/ComparisonSummaryDirective.js"></script>
+    <script src="directives/rating/RatingDirective.js"></script>
+    <script src="directives/thresholdSelector/ThresholdSelectorDirective.js"></script>
+    <script src="filters/TitleCaseFilter.js"></script>
+    
+    <!-- Services -->
+    <script src="services/ApiService.js"></script>
+    <script src="services/ResourceService.js"></script>
+    <script src="services/TooltipService.js"></script>
+    <script src="services/DataService.js"></script>
+    <script src="services/StateService.js"></script>
+    <script src="services/TagService.js"></script>
+    <script src="services/MetricsService.js"></script>
+    <script src="services/AggregateService.js"></script>
+    <script src="services/ChartDataService.js"></script>
+    <script src="services/ComparisonSummaryService.js"></script>
+    <script src="services/summary/SummaryService.js"></script>
+    <script src="services/summary/format.js"></script>
+    <script src="services/summary/i18n.js"></script>
+    <script src="services/summary/i18n_en.js"></script>
+    
+    <!-- Pages-->
+    <script src="pages/splash/SplashCtrl.js"></script>
+    <script src="controllers/MainCtrl.js"></script>
+    <script src="pages/import/ImportCtrl.js"></script>
+    <script src="pages/subject/SubjectCtrl.js"></script>
+
+    <!-- 
+        Old Demo Application Scripts
+        These should be phased out over time since there is a lot of 
+        unneccessary code.
+    -->
+    <script type="text/javascript" src="./js/vendors/q.js"></script>
+    <script type="text/javascript" src="./js/components/q_util.js"></script>
+    <script type="text/javascript" src="js/components/text-summary.js"></script>
+    <script type="text/javascript" src="js/components/dictionary.standalone.js"></script>
+    <script type="text/javascript" src="js/components/personality-insights-profile.0.1.0.js"></script>
+    <script type="text/javascript" src="js/components/personality-insights-trait-tooltips.standalone.js"></script>
+    <script type="text/javascript" src="js/components/tab-panels.js"></script>
+    <script type="text/javascript" src="js/demo.js"></script>
+    <script type="text/javascript" src="js/sunburst.js"></script>
+<!--    <script type="text/javascript" src="js/ga.js"></script>-->
+    <script src="js/components/personality-sunburst-chart.standalone.js"></script>
+
+</body>
+
+</html>

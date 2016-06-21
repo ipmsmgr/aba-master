@@ -1,0 +1,30 @@
+{
+  "name": "node-api",
+  "main": "server.js",
+  "dependencies": {
+    "angular-ui-bootstrap": "^1.3.3",
+    "body-parser": "~1.0.1",
+    "bootstrap": "^3.3.6",
+    "config": "^1.20.1",
+    "connect-multiparty": "^2.0.0",
+    "csv": "^0.4.6",
+    "dateformat": "^1.0.12",
+    "docxtemplater": "^2.1.0",
+    "docxtemplater-image-module": "^1.0.1",
+    "express": "~4.0.0",
+    "image-size": "^0.5.0",
+    "mammoth": "^0.3.33",
+    "mongodb": "^2.1.11",
+    "mongoose": "^3.6.20",
+    "node-rest-client": "^1.8.0",
+    "officegen": "^0.2.9",
+    "q": "^1.4.1",
+    "request": "^2.69.0",
+    "underscore": "^1.8.3",
+    "watson-developer-cloud": "^1.3.3"
+  },
+  "devDependencies": {
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-sass": "^1.0.0"
+  }
+}

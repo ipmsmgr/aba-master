@@ -1,0 +1,47 @@
+[
+    {
+      "label": "medium",
+      "tags": [
+        {
+          "label": "tweets"
+        },
+        {
+          "label": "speech"
+        },
+        {
+          "label": "interview"
+        }
+      ]
+    },
+    {
+      "label": "orientation",
+      "tags": [
+        {
+          "label": "conservative"
+        },
+        {
+          "label": "liberal"
+        },
+        {
+          "label": "independent"
+        }
+      ]
+    },
+    {
+      "label": "domain",
+      "tags": [
+        {
+          "label": "journalism"
+        },
+        {
+          "label": "politics"
+        },
+        {
+          "label": "sports"
+        },
+        {
+          "label": "technology"
+        }
+      ]
+    }
+  ]

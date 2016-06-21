@@ -1,0 +1,173 @@
+<div layout="row">
+    <div layout="column" class="sidenav" style="border-right: 1px solid #ECECEC;">
+        <div style="padding:5px;text-align:center;margin-bottom: 20px;">
+            <img class="banner--service-icon" src="images/service-icon.svg" alt="Personality Insights API Icon" style="width:80px;">
+        </div>
+        <div class="sidenav-item" ng-click="panels.source = !panels.source" ng-class="{active: panels.source}" ng-show="analysis"><i class="fa fa-quote-left" aria-hidden="true"></i> Source</div>
+        <div class="sidenav-item" ng-click="panels.summary = !panels.summary" ng-class="{active: panels.summary}" ><i class="fa fa-file-text-o" aria-hidden="true"></i> Summary</div>
+        <div class="sidenav-item" ng-click="panels.behaviors = !panels.behaviors" ng-class="{active: panels.behaviors}" ng-show="analysis"><i class="fa fa-smile-o" aria-hidden="true"></i> Behaviors</div>
+        <div class="sidenav-item" ng-click="panels.ranges = !panels.ranges" ng-class="{active: panels.ranges}" ng-show="analysis"><i class="fa fa-sliders" aria-hidden="true"></i> Ranges</div>
+        <div class="sidenav-item" ng-click="panels.sunburst = !panels.sunburst" ng-class="{active: panels.sunburst}" ng-show="analysis"><i class="fa fa-pie-chart" aria-hidden="true"></i> Sunburst</div>
+        <div class="sidenav-item" ng-click="panels.tags = !panels.tags" ng-class="{active: panels.tags}"><i class="fa fa-bar-chart" aria-hidden="true"></i> Barchart</div>
+        <div class="sidenav-item" ng-click="panels.details = !panels.details" ng-class="{active: panels.details}" ng-show="analysis"><i class="fa fa-info" aria-hidden="true"></i> Details</div>
+
+    </div>
+    
+    <div flex layout="column">
+
+        <div class="_demo--container2" ng-show="subjectId">
+            <div style="padding: 10px 40px;">
+
+                                <rzslider rz-slider-model="slider.value" rz-slider-options="slider.options"></rzslider>
+
+                <div layout="column">
+                    <div layout="row" layout-align="center center">
+                        <div>
+                            <h1 class="banner--service-title base--h1">
+                     <span ng-show="subjectId">{{subjectId}} 
+                         <span class="fa-stack fa-lg title-add" ng-click="newAnalysis()" >
+                          <i class="fa fa-circle-o fa-stack-2x"></i>
+                          <i class="fa fa-plus fa-stack-1x"></i>
+                        </span>
+                            </span>
+                    </h1>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="_demo--container2" ng-show="analysis" style="padding:10px 40px;">
+            <div class="_content2" layout="row" layout-align="center center">
+                <h2 class="base--h2" ng-show="analysis.label" style="margin:0px;">{{analysis.label}}</h2>
+                <h2 class="base--h2" ng-show="!analysis.label" style="margin:0px;">Analysis Results</h2>
+
+                <div flex>
+                </div>
+
+                <button class="base-button" ng-click="generateReport(analysis)">Generate Report</button>
+                <button class="base-button" ng-click="export(analysis)">Export CSV</button>
+            </div>
+
+            <!-- Display tags-->
+            <div flex style="margin:0px;" layout="row">
+                <div class="tag-pill" ng-repeat="tag in analysis.tags">
+                    <span>{{tag}}
+                    </span>
+                </div>
+            </div>
+
+            <pi-rating></pi-rating>
+
+            <div class="_content2 chart-panel" ng-show="panels.source">
+
+
+                <div layout="row" layout-align="center center">
+                    <h3 class="base--h3 output--header">Source Text</h3>
+                    <div flex style="margin:0px;"></div>
+                    <div style="padding-right: 30px;color: #404041;font-size: smaller;margin:0px;"> {{analysis.profile.word_count}} words
+                    </div>
+                </div>
+                <textarea id="inputText2" class="base--textarea input--text-area orientation" readonly="readonly" ng-model="analysis.text" style="height:300px;" ng-hide="hideText"> </textarea>
+            </div>
+
+        </div>
+
+<<<<<<< HEAD
+        <pi-comparison-summary ng-if="analyses.length && panels.summary"></pi-comparison-summary>
+=======
+        <pi-comparison-summary ng-if="!analysis && panels.summary"></pi-comparison-summary>
+>>>>>>> d0fd0de195d8ecd36a695f70fb0e2640cb8f2576
+        
+        <pi-summary ng-if="analysis && panels.summary"></pi-summary>
+
+        <pi-behaviors profile="analysis.profile" behaviors="behaviors" ng-show="analysis && panels.behaviors"></pi-behaviors>
+
+
+        <pi-details ng-show="analysis && panels.details"></pi-details>
+
+
+        <pi-tag-analysis ng-show="panels.tags" metrics="metrics"></pi-tag-analysis>
+
+        <!-- Slider -->
+        <pi-slider profile="analysis.profile" ng-show="state.is(states.single) && panels.ranges"></pi-slider>
+
+
+        <!-- Sunburst -->
+        <pi-sunburst profile="analysis.profile" ng-show="state.is(states.single) && panels.sunburst"></pi-sunburst>
+
+
+
+    </div>
+    
+    <!-- RIGHT PANEL -->
+    <div layout="row">
+        
+
+        <!-- Metricss Selection Panel -->
+        <pi-metrics-tree metrics="metrics" ng-show="state.rightPanel == 'metrics'"></pi-metrics-tree>
+
+        <!-- Analysis Selection Panel -->
+        <div ng-show="state.rightPanel == 'analyses'"  class="right-panel" >
+            <div class="panel-header"  ng-click="state.rightPanel=null">
+                Subject Analyses
+            </div>
+
+            <div class="subnav-item" layout="row" ng-click="multiSelectClick()" ng-class="{ 'active2': selectMultiple}" ng-show="analyses.length">
+                <div style="padding-right: 8px;">
+                    <i ng-if="selectMultiple" class="fa fa-toggle-on"></i>
+                    <i ng-if="!selectMultiple" class="fa fa-toggle-off" aria-hidden="true"></i>
+                </div>
+                <div style="margin:0px;">
+                    Select Multiple
+                </div>
+            </div>
+
+
+            <div class="subnav-item" ng-repeat="a in analyses | orderBy: 'date' " layout="row" ng-click="toggle(a)">
+                <div style="padding-right: 8px;">
+                    <i class="fa fa-check-square-o" ng-if="a.selected"></i>
+                    <i class="fa fa-square-o" ng-if="!a.selected"></i>
+                </div>
+                <div style="margin:0px;">
+                    <div class="analysis-date">{{a.label}}</div>
+                    <div class="analysis-time">{{a.date | date:"MM/dd/yyyy"}}</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Analysis Selection Panel -->
+        <pi-tags ng-show="state.rightPanel == 'tags'"></pi-tags>
+
+        <!-- Subjects Selection Panel -->
+        <pi-subjects-select ng-show="state.rightPanel == 'subjects'"></pi-subjects-select>
+
+        
+        <div layout="column" class="right-panel-menu">
+            <div ng-click="state.rightPanel='metrics'" class="menu-btn" ng-class="{'active':state.rightPanel=='metrics'}" tooltips tooltip-template="Metrics" tooltip-side="left">
+                <i class="fa fa-tachometer" aria-hidden="true"></i>
+            </div>
+
+<<<<<<< HEAD
+            <div ng-click="state.rightPanel='analyses'" class="menu-btn" ng-class="{'active':state.rightPanel=='analyses'}">
+                <i class="fa fa-server" aria-hidden="true"></i>
+=======
+            <div ng-click="state.rightPanel='analyses'" class="menu-btn" ng-class="{'active':state.rightPanel=='analyses'}" tooltips tooltip-template="Subject Analyses" tooltip-side="left">
+                <i class="fa fa-bar-chart" aria-hidden="true"></i>
+>>>>>>> d0fd0de195d8ecd36a695f70fb0e2640cb8f2576
+            </div>
+            
+            <div ng-click="state.rightPanel='tags'" class="menu-btn" ng-class="{'active':state.rightPanel=='tags'}" tooltips tooltip-template="Tags" tooltip-side="left">
+                <i class="fa fa-tags" aria-hidden="true"></i>
+            </div>          
+            
+            <div ng-click="state.rightPanel='subjects'" class="menu-btn" ng-class="{'active':state.rightPanel=='subjects'}" tooltips tooltip-template="Subjects" tooltip-side="left">
+                <i class="fa fa-users" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</div>

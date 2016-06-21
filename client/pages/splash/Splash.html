@@ -1,0 +1,25 @@
+
+
+<div style="padding:5px;text-align:center;margin-bottom: 20px;margin-top: 40px;">
+    <img class="banner--service-icon" src="images/service-icon.svg" alt="Personality Insights API Icon" >
+</div>
+<div layout="row" layout-align="center center">
+    <div class="splash-div">
+        <div><i class="fa fa-user" aria-hidden="true" style="font-size:50px;margin-bottom: 20px;"></i></div>
+        <div>Load Subject</div>
+        <div layout="column">
+            <input ng-model="subject" style="width:100%;border:1px solid #264A60;" />
+            <button ng-click="loadSubject(subject)" class="splash-btn" ng-disabled="!subject.length">Load Subject</button></div>
+        <div class="splash-help">Enter the ID of the subject and click "Load Subject" to load all analyses that have been stored for that subject.</div>
+    </div>
+    <div ng-click="analyze()" class="splash-div splash-btn" layout="column" layout-align="center center">
+        <div><i class="fa fa-upload" aria-hidden="true" style="font-size:50px;margin-bottom: 20px;"></i></div>
+        <div>Analyze Documents</div>
+        <div class="splash-help">Upload new documents or files for a subject directly from here.</div>
+    </div>
+    <div ng-click="discover()" class="splash-div splash-btn"  layout="column" layout-align="center center">
+        <div><i class="fa fa-bar-chart" aria-hidden="true" style="font-size:50px;margin-bottom: 20px;"></i></div>
+        <div>Explore</div>
+        <div class="splash-help">If you don't have a particular subject in mind but just want to browse the data in the system, you should click here.</div>    
+    </div>
+</div>
